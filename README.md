@@ -18,7 +18,6 @@ To use the Terminal-Based Maze Solver, follow these steps:
     
     ```
         git clone https://github.com/Akankshabairagi55/terminal-based-maze-solver.git
-    
     ```
     
 
@@ -27,7 +26,6 @@ To use the Terminal-Based Maze Solver, follow these steps:
     
     ```
         cd terminal-based-maze-solver
-    
     ```    
     
 
@@ -38,7 +36,6 @@ To use the Terminal-Based Maze Solver, follow these steps:
     
     ```
         python TerminalBasedMazeSolver.py
-    
     ```    
     
 

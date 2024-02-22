@@ -27,7 +27,7 @@ def print_maze(maze):
             elif maze[row][col] == "▓":
                 print(colored(" ▓ ","red","on_white"),end="")
             elif maze[row][col] == "◍":
-                print(colored(" ◍ ","green","on_white"),end="")
+                print(colored(" ◍ ","green","on_black"),end="")
         print()
         
 #using Bfs
@@ -56,7 +56,7 @@ def find_path(maze, start, goal):
 
     return None
 
-# solve maze using DFS
+# solve maze using BFS
 def solve_maze(maze):
     start_position = (0, 0)
     end_position = (len(maze) - 1, len(maze[0]) - 1)
@@ -74,7 +74,7 @@ def solve_maze(maze):
    
 def main():
     
-    print(colored("\nLet's Start the Maze Solver Game","red","on_white"))
+    print(colored("\nLet's Start the Maze Solver Game","red","on_black"))
     n = int(input("\nEnter the size of the maze (n*n) :-  "))
     print()
     maze = generate_maze(n) 
@@ -84,7 +84,7 @@ def main():
     
         print("\n1. Print the Path ")
         print("2. Generate another Maze ")
-        print("3. Exit the Game ❌\n")
+        print("3. Exit ❌ the Game \n")
         
         players_choice=int(input("Enter Your Choice (1/2/3)❓❓:-  "))
         
@@ -92,12 +92,13 @@ def main():
             
             solution = solve_maze(maze)
             # print(maze)
-            
+            print()
             if solution:
-                print(colored("\nPath Found \n","green","on_white"))
+                print(colored("Path Found","green"))
+                print()
                 print_maze(maze)
             else:
-                print(colored("\nNo path found \n","red","on_white"))        
+                print(colored("No path found","red","on_white"))        
             
         elif players_choice==2:
             n = int(input("\nEnter the size of the maze (n*n) :-  "))
@@ -118,5 +119,8 @@ def main():
         else:
             players_choice=int(input("Enter Your Choice (1/2/3)❓❓:-  "))
             
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
+
+    
+   
